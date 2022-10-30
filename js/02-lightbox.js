@@ -7,7 +7,7 @@ const galleryItem = createGalleryItem(galleryItems);
 
 galleryToAdd.insertAdjacentHTML('beforeend', galleryItem);
 
-galleryToAdd.addEventListener('click', modalOpen);
+
 
 function createGalleryItem(galleryItems) {
     return galleryItems.map(({ preview, original, description }) => {
@@ -25,17 +25,17 @@ function createGalleryItem(galleryItems) {
     
 }
 
-
-function modalOpen(evt) {
-    
-    evt.preventDefault();
-    
-    if (evt.target.nodeName !== "IMG") {
-        return;
-    }
-    const lightBox = new SimpleLightbox('.gallery a', {
+let lightBox = new SimpleLightbox('.gallery a', {
         captionsData: "alt",
         captionsDelay: 250
+        
     });
-} lightBox.open();
 
+gallery.on("show.simplelightbox", function () {
+   
+ });
+ 
+
+ gallery.on("error.simplelightbox", function (e) {});
+
+ 
