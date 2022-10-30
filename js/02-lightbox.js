@@ -39,9 +39,3 @@ function modalOpen(evt) {
     });
 } lightBox.open();
 
- galleryToAdd.addEventListener('keydown', (evt) => {
-        if (evt.code === 'Escape') {
-            lightBox.close();
-        }
-    });
-  
